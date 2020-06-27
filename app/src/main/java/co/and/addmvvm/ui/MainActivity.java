@@ -11,8 +11,10 @@ import android.widget.Button;
 /**
  * Created by Andres Rodriguez 25/06/2020
  */
+
 public class MainActivity extends AppCompatActivity {
     private Button btViewModelActivityAdd;
+    private Button btViewModelActivityUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +25,20 @@ public class MainActivity extends AppCompatActivity {
         btViewModelActivityAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mIntent = new Intent(MainActivity.this,ViewModelAdd.class);
+                Intent mIntent = new Intent(MainActivity.this, ViewModelAddActivity.class);
                 startActivity(mIntent);
             }
         });
+
+        btViewModelActivityUser = findViewById(R.id.btnToActivityUser);
+        btViewModelActivityUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mIntent = new Intent(MainActivity.this, ViewModelUserActivity.class);
+                startActivity(mIntent);
+            }
+        });
+
+
     }
 }

@@ -14,5 +14,12 @@
         android:layout_height="wrap_content"
         android:text="Add Activity"
         android:layout_gravity="center_horizontal"/>
+    <Button
+        android:id="@+id/btnToActivityUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Activity"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"/>
 
 </LinearLayout>

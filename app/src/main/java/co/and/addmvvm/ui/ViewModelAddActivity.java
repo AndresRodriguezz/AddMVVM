@@ -19,7 +19,7 @@ import java.security.Provider;
  * Created by Andres Rodriguez 25/06/2020
  */
 
-public class ViewModelAdd extends AppCompatActivity {
+public class ViewModelAddActivity extends AppCompatActivity {
     private TextView tvNotViewModel;
     private TextView tvAddViewModel;
     private Button btAddNumbers;
