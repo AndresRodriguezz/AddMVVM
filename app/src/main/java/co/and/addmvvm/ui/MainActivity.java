@@ -1,7 +1,9 @@
 package co.and.addmvvm.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModel;
 import co.and.addmvvm.R;
+import co.and.addmvvm.viewmodel.LiveDataUserViewModel;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     private Button btViewModelActivityAdd;
     private Button btViewModelActivityUser;
+    private Button btViewModelActivityUserLiveData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent mIntent = new Intent(MainActivity.this, ViewModelUserActivity.class);
+                startActivity(mIntent);
+            }
+        });
+
+        btViewModelActivityUserLiveData = findViewById(R.id.btnToActivityUserLiveData);
+        btViewModelActivityUserLiveData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mIntent = new Intent(MainActivity.this, LiveDataActivity.class);
                 startActivity(mIntent);
             }
         });
